@@ -1,60 +1,114 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c1a1e">
-<meta name="description" content="仿生扑翼飞行项目成果展示：Hubara 飞行平台、三关节五自由度机构研究与工程化路线。">
-<title>WING / 仿生扑翼飞行</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
-</head><body>
-<a class="skip-link" href="#achieved">跳到项目成果</a>
+<meta name="description" content="Bio-inspired flight: the Hubara flying platform, articulated wing mechanisms, wind-tunnel measurement exploration, and the path to engineering prototypes.">
+<title>WING / Bio-inspired Flight</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-en">
+</head>
+<body>
+<a class="skip-link" href="#achieved">Skip to project achievements</a>
 <header class="site-header">
-<a class="brand" href="#home" aria-label="WING 项目首页"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 3 12 24 20 11 28 24 38 3M10 3 15 14M30 3 25 14"/></svg><span>WING<small>仿生扑翼飞行</small></span></a>
-<nav aria-label="项目章节"><a href="#achieved"><span>01</span> 已开展工作</a><a href="#progress"><span>02</span> 正在开展</a><a href="#next"><span>03</span> 未来计划</a></nav>
-<button class="presentation-button" id="present" type="button" aria-label="进入全屏汇报"><span>全屏汇报</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></button>
-</header><main>
+  <a class="brand" href="#home" aria-label="WING project home"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 3 12 24 20 11 28 24 38 3M10 3 15 14M30 3 25 14"/></svg><span>WING<small>BIO-INSPIRED FLIGHT</small></span></a>
+  <nav aria-label="Project chapters"><a href="#achieved"><span>01</span> Achievements</a><a href="#progress"><span>02</span> In progress</a><a href="#next"><span>03</span> Roadmap</a></nav>
+  <button class="presentation-button" id="present" type="button" aria-label="Enter presentation fullscreen"><span>Present</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></button>
+</header>
+<main>
 <section class="hero" id="home" aria-labelledby="hero-title">
-<div class="hero-visual"><video id="hero-video" class="ambient-video" autoplay muted loop playsinline preload="auto" poster="media/flight-side.jpg" src="media/flight-side.mp4" aria-label="猎鹰飞行参考影像"></video></div>
-<div class="hero-content wrap"><p class="eyebrow"><span class="small-line"></span> BIO-INSPIRED FLIGHT PROGRAM</p><h1 id="hero-title">从飞行验证<br>迈向<span>仿生飞行</span></h1><p class="hero-description">以真实鸟翼为参照，<br>探索更丰富、更协调的扑翼运动。</p><a class="primary-link" href="#achieved">项目成果与发展路线 <span aria-hidden="true">↗</span></a></div>
-<div class="hero-caption"><span class="live-dot"></span> FALCON / 真实飞行参考<button type="button" class="icon-button" id="hero-toggle" aria-label="暂停背景视频">Ⅱ</button></div>
-<div class="hero-bottom wrap"><span>PROJECT OVERVIEW</span><p>一个飞行平台。两条研究主线。<br class="mobile-break">面向下一代仿生扑翼机构。</p><a href="#achieved" aria-label="向下查看项目成果">↓</a></div>
+  <div class="hero-visual"><video id="hero-video" class="ambient-video" autoplay muted loop playsinline preload="auto" poster="media/flight-side.jpg" src="media/flight-side.mp4" aria-label="Real falcon flight reference"></video></div>
+  <div class="hero-content wrap">
+    <p class="eyebrow"><span class="small-line"></span> BIO-INSPIRED FLIGHT PROGRAM</p>
+    <h1 id="hero-title">Flight proven.<br> <span>Nature inspired.</span></h1>
+    <p class="hero-description">From a flying platform to richer,<br> more coordinated wing motion.</p>
+    <a class="primary-link" href="#achieved">Explore the program <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="hero-caption"><span class="live-dot"></span> FALCON / FLIGHT REFERENCE<button type="button" class="icon-button" id="hero-toggle" aria-label="Pause background video">Ⅱ</button></div>
+  <div class="hero-bottom wrap"><span>PROJECT OVERVIEW</span><p>Biological observation.<br class="mobile-break"> Mechanism design. Experimental exploration.</p><a href="#achieved" aria-label="Scroll to achievements">↓</a></div>
 </section>
 <div class="chapter-strip"><div class="wrap">
-<a href="#achieved"><span class="chapter-number">01</span><span><small>已开展工作</small><strong>飞行能力已验证</strong></span><i class="stage-dot complete"></i></a>
-<a href="#progress"><span class="chapter-number">02</span><span><small>正在开展</small><strong>拓展鸟翼运动能力</strong></span><i class="stage-dot current"></i></a>
-<a href="#next"><span class="chapter-number">03</span><span><small>未来计划</small><strong>走向工程样机</strong></span><i class="stage-dot planned"></i></a>
+  <a href="#achieved"><span class="chapter-number">01</span><span><small>ACHIEVED</small><strong>A platform that flies</strong></span><i class="stage-dot complete"></i></a>
+  <a href="#progress"><span class="chapter-number">02</span><span><small>IN PROGRESS</small><strong>Richer wing motion</strong></span><i class="stage-dot current"></i></a>
+  <a href="#next"><span class="chapter-number">03</span><span><small>WHAT COMES NEXT</small><strong>From models to prototypes</strong></span><i class="stage-dot planned"></i></a>
 </div></div>
+
 <section class="section section-light" id="achieved" aria-labelledby="achieved-title"><div class="wrap">
-<div class="section-heading"><div><p class="eyebrow">01 / THE FOUNDATION</p><h2 id="achieved-title">已飞起来，是新的起点。</h2></div><span class="status"><i></i> 已完成飞行验证</span></div>
-<div class="platform-layout">
-<div class="hubara-stage" id="hubara-panel"><div class="stage-corners" aria-hidden="true"></div>
-<div id="hubara-placeholder"><span class="hubara-wordmark">HUBARA</span><div class="placeholder-ring" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 6 9 6-9 6z"/></svg></div><p>飞行演示影像</p><small>待补充项目实飞视频</small></div>
-<video id="hubara-video" controls playsinline preload="metadata" hidden aria-label="Hubara 实飞视频"></video>
-<div class="stage-caption"><span><i></i> HUBARA PLATFORM</span><label for="hubara-file" class="upload-button" tabindex="0">载入实飞视频 <span>＋</span></label><input id="hubara-file" type="file" accept="video/*,.mp4,.mov,.webm" hidden></div></div>
-<div class="platform-details"><p class="eyebrow">EXISTING PLATFORM</p><h3>Hubara</h3><p class="body-copy">两关节、两自由度扑翼平台，<br>已具备正常飞行能力。</p><div class="platform-stats"><div><b>2</b><span>关节</span></div><div><b>2</b><span>自由度</span></div></div><div class="design-challenge"><span class="mini-label">从能飞，到更像真实鸟翼</span><p>现有运动形式仍较简化。下一阶段，将进一步拓展关节间的协同运动。</p></div></div>
-</div></div></section>
-<section class="section section-dark" id="progress" aria-labelledby="progress-title"><div class="wrap">
-<div class="section-heading research-heading"><div><p class="eyebrow">02 / RESEARCH IN MOTION</p><h2 id="progress-title">看懂鸟翼，<br>让机构接近真实运动。</h2></div><div class="target-stats"><p>正在推进的机构目标</p><div><b>3<small>关节</small></b><span>/</span><b>5<small>自由度</small></b></div></div></div>
-<div class="research-flow" aria-label="研究路线"><span><i>01</i> 真实飞行观察</span><b>→</b><span><i>02</i> 提取运动特征</span><b>→</b><span><i>03</i> 机构建模与优化</span></div>
-<article class="research-block"><div class="work-heading"><div><span class="work-index">A</span><h3>把飞行影像，变成运动依据。</h3></div><p>追踪腕部与翼尖，提取末段运动，<br>建立机构设计的真实参考。</p></div>
-<div class="observation-grid">
-<figure class="film-card tracking-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/dlc-side.jpg" src="media/dlc-side.mp4" aria-label="猎鹰翼部关键点追踪演示"></video><button class="play-button" type="button" data-film="media/dlc-side.mp4" data-title="真实飞行 · 腕部与翼尖追踪" aria-label="放大播放关键点追踪视频"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7z"/></svg></button></div><figcaption><span><i>01</i> 真实飞行 · 关键点追踪</span><span>观察</span></figcaption></figure>
-<figure class="film-card trajectory-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/trajectory-oblique.jpg" src="media/trajectory-oblique.mp4" aria-label="腕部与翼尖空间轨迹演示"></video><button class="expand-button" type="button" data-film="media/trajectory-oblique.mp4" data-title="运动提取 · 腕部与翼尖的空间轨迹" aria-label="放大播放空间轨迹视频">↗</button></div><figcaption><span><i>02</i> 空间运动轨迹</span><span>提取</span></figcaption></figure>
-</div></article>
-<article class="research-block mechanism-block"><div class="work-heading"><div><span class="work-index">B</span><h3>把运动目标，转化为机构设计。</h3></div><p>拓展成熟机构的运动能力，<br>以智能优化调整杆长与周期运动。</p></div>
-<figure class="film-card mechanism-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/mechanism.jpg" src="media/mechanism.mp4" aria-label="扑翼机构运动与目标路径对比仿真"></video><button class="expand-button" type="button" data-film="media/mechanism.mp4" data-title="机构运动 · 目标路径与生成路径对比" aria-label="放大播放机构仿真视频">↗</button></div><figcaption><span><i>03</i> 机构运动与路径对比</span><span class="simulation-label">数字仿真 · 阶段成果</span></figcaption></figure>
-<div class="mechanism-summary"><p><span>结构拓展</span> 三关节 · 五自由度</p><i>+</i><p><span>智能优化</span> 杆长 · 周期运动</p><i>→</i><p><span>设计方向</span> 更接近真实鸟翼的运动</p></div>
-</article>
-<div class="research-output"><div class="output-title"><p class="eyebrow">RESEARCH OUTPUT</p><h3>从研究探索，到阶段成果。</h3></div><div class="paper-count"><b>2</b><span>篇论文成果</span></div><a class="secondary-link" href="https://yihaodong12.github.io/Falcon-Mechanism-Supplementary/" target="_blank" rel="noopener noreferrer">研究补充材料 <span>↗</span></a></div>
+  <div class="section-heading"><div><p class="eyebrow">01 / THE FOUNDATION</p><h2 id="achieved-title">Flight is the starting point.</h2></div><span class="status"><i></i> Flight demonstrated</span></div>
+  <div class="platform-layout">
+    <div class="hubara-stage" id="hubara-panel"><div class="stage-corners" aria-hidden="true"></div>
+      <div id="hubara-placeholder"><span class="hubara-wordmark">HUBARA</span><div class="placeholder-ring" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 6 9 6-9 6z"/></svg></div><p>Hubara in flight</p><small>Project flight footage to be added</small></div>
+      <video id="hubara-video" controls playsinline preload="metadata" hidden aria-label="Hubara flight demonstration"></video>
+      <div class="stage-caption"><span><i></i> HUBARA PLATFORM</span><label for="hubara-file" class="upload-button" tabindex="0">Preview a video <span>＋</span></label><input id="hubara-file" type="file" accept="video/*,.mp4,.mov,.webm" hidden></div>
+    </div>
+    <div class="platform-details"><p class="eyebrow">EXISTING PLATFORM</p><h3>Hubara</h3><p class="body-copy">A two-joint, two-degree-of-freedom<br> flapping-wing platform that can fly.</p>
+      <div class="platform-stats"><div><b>2</b><span>joints</span></div><div><b>2</b><span>DOF</span></div></div>
+      <div class="design-challenge"><span class="mini-label">Beyond simplified wing motion</span><p>The next step is to reproduce a wider range of coordinated movements seen in real bird wings.</p></div>
+    </div>
+  </div>
 </div></section>
+
+<section class="section section-dark" id="progress" aria-labelledby="progress-title"><div class="wrap">
+  <div class="section-heading research-heading"><div><p class="eyebrow">02 / RESEARCH IN MOTION</p><h2 id="progress-title">Observe nature.<br> Engineer the motion.</h2></div><div class="target-stats"><p>Mechanism development target</p><div><b>3<small>joints</small></b><span>/</span><b>5<small>DOF</small></b></div></div></div>
+  <div class="research-flow" aria-label="Research workflow"><span><i>01</i> Observe flight</span><b>→</b><span><i>02</i> Extract motion</span><b>→</b><span><i>03</i> Design mechanisms</span><b>→</b><span><i>04</i> Develop experiments</span></div>
+  <article class="research-block">
+    <div class="work-heading"><div><span class="work-index">A</span><h3>From flight footage to motion targets.</h3></div><p>Track the wrist and wingtip to capture<br> the movement that a mechanism should reproduce.</p></div>
+    <div class="observation-grid">
+      <figure class="film-card tracking-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/dlc-side.jpg" src="media/dlc-side.mp4" aria-label="Falcon wrist and wingtip tracking"></video><button class="play-button" type="button" data-film="media/dlc-side.mp4" data-title="Real flight / Wrist and wingtip tracking" aria-label="Enlarge motion-tracking video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7z"/></svg></button></div><figcaption><span><i>01</i> Keypoint tracking in real flight</span><span>OBSERVE</span></figcaption></figure>
+      <figure class="film-card trajectory-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/trajectory-oblique.jpg" src="media/trajectory-oblique.mp4" aria-label="Reconstructed wrist and wingtip trajectories"></video><button class="expand-button" type="button" data-film="media/trajectory-oblique.mp4" data-title="Motion extraction / Spatial trajectories" aria-label="Enlarge spatial-trajectory video">↗</button></div><figcaption><span><i>02</i> Spatial motion reference</span><span>EXTRACT</span></figcaption></figure>
+    </div>
+  </article>
+  <article class="research-block mechanism-block">
+    <div class="work-heading"><div><span class="work-index">B</span><h3>From motion targets to mechanism design.</h3></div><p>Extend an established mechanism and optimize<br> link lengths and periodic motion.</p></div>
+    <figure class="film-card mechanism-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/mechanism.jpg" src="media/mechanism.mp4" aria-label="Mechanism simulation and reference-path comparison"></video><button class="expand-button" type="button" data-film="media/mechanism.mp4" data-title="Mechanism motion / Target and generated paths" aria-label="Enlarge mechanism simulation">↗</button></div><figcaption><span><i>03</i> Mechanism motion and path comparison</span><span class="simulation-label">SIMULATION / INTERIM RESULTS</span></figcaption></figure>
+    <div class="mechanism-summary"><p><span>STRUCTURE</span> 3 joints · 5 degrees of freedom</p><i>+</i><p><span>INTELLIGENT OPTIMIZATION</span> Link lengths · Periodic motion</p><i>→</i><p><span>DESIGN DIRECTION</span> Closer to biological wing motion</p></div>
+  </article>
+  <div class="research-output"><div class="output-title"><p class="eyebrow">RESEARCH OUTPUT</p><h3>Motion analysis &amp; mechanism design.</h3></div><div class="paper-count"><b>2</b><span>research papers</span></div><a class="secondary-link" href="https://yihaodong12.github.io/Falcon-Mechanism-Supplementary/" target="_blank" rel="noopener noreferrer">Research materials <span>↗</span></a></div>
+
+  <article class="research-block tunnel-block" aria-labelledby="tunnel-title">
+    <div class="work-heading"><div><span class="work-index">C</span><h3 id="tunnel-title">Preparing to measure flight in the wind tunnel.</h3></div><span class="exploration-tag">EXPERIMENTAL EXPLORATION</span></div>
+    <p class="experiment-intro">Alongside mechanism development, we are exploring wind-tunnel methods for extracting real-bird wing trajectories. A robotic bird serves as a surrogate while we investigate camera settings and multi-view synchronization, select imaging and lighting hardware, and design calibration and test procedures. This work prepares the measurement approach for future studies of biological flight.</p>
+    <div class="tunnel-grid">
+      <figure class="tunnel-visual"><div class="concept-screen"><img src="media/wind-tunnel-concept.png" alt="Concept illustration of a robotic bird in a wind-tunnel test section, viewed by two cameras" loading="lazy" width="1672" height="941"><span class="concept-badge">SETUP CONCEPT</span></div><figcaption>Multi-view observation of a robotic-bird surrogate<span>Illustrative setup, not an experimental photograph</span></figcaption></figure>
+      <div class="hubara-stage tunnel-stage" id="tunnel-panel"><div class="stage-corners" aria-hidden="true"></div>
+        <div id="tunnel-placeholder"><span class="tunnel-wordmark">WIND TUNNEL</span><div class="placeholder-ring" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 6 9 6-9 6z"/></svg></div><p>Robotic-bird flight trial</p><small>Wind-tunnel video to be added</small></div>
+        <video id="tunnel-video" controls playsinline preload="metadata" hidden aria-label="Robotic-bird wind-tunnel flight video"></video>
+        <div class="stage-caption"><span><i></i> EXPERIMENT FOOTAGE</span><label for="tunnel-file" class="upload-button" tabindex="0">Preview a video <span>＋</span></label><input id="tunnel-file" type="file" accept="video/*,.mp4,.mov,.webm" hidden></div>
+      </div>
+    </div>
+    <div class="experiment-focus" aria-label="Experimental preparation priorities">
+      <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 8h7l2-3h6l2 3h5v19H5z"/><circle cx="16" cy="17" r="6"/></svg><span><strong>Camera setup</strong><small>Frame rate · Exposure · Synchronization</small></span></div>
+      <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6h20v14H6zM16 20v7m-8 0h16"/><path d="m12 11 8 4-8 3z"/></svg><span><strong>Hardware selection</strong><small>Cameras · Lenses · Illumination</small></span></div>
+      <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 5h15v23H6V5h3m2-2h8v5h-8zM11 14h9m-9 5h9m-9 5h6"/></svg><span><strong>Test design</strong><small>Calibration · Trial sequence · Repeatability</small></span></div>
+    </div>
+  </article>
+</div></section>
+
 <section class="section section-light roadmap" id="next" aria-labelledby="next-title"><div class="wrap">
-<div class="section-heading"><div><p class="eyebrow">03 / THE NEXT CHAPTER</p><h2 id="next-title">两条路径，同一个目标。</h2></div><p class="heading-note">让数字机构走向工程样机，<br>让真实运动成为验证依据。</p></div>
-<div class="roadmap-tracks">
-<article class="roadmap-card"><div class="roadmap-top"><span>01 / BUILD</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="m28 6 20 11v22L28 50 8 39V17L28 6Zm0 22 20-11M28 28 8 17m20 11v22M18 11l20 11v12"/></svg></div><h3>从模型，到实物。</h3><p>面向可加工性设计，<br>完成制造、组装与样机运动验证。</p><div class="engineering-steps"><span><i>01</i>工程设计</span><b>→</b><span><i>02</i>制造组装</span><b>→</b><span><i>03</i>样机验证</span></div><div class="deliverable"><span>预期交付</span><strong>三关节五自由度工程样机</strong></div></article>
-<article class="roadmap-card"><div class="roadmap-top"><span>02 / UNDERSTAND</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M5 41c8 0 9-27 23-27s14 27 23 27M8 9v38h42M20 34v-8m8-4v-5m8 17v-8"/></svg></div><h3>从片段，到完整飞行。</h3><p>记录不同工况下的猎鹰翼运动，<br>提取更完整的三关节五自由度运动参考。</p><div class="flight-phases"><span><svg viewBox="0 0 72 40" aria-hidden="true"><path d="M4 34c32 0 38-7 60-28m-12 1 12-1-1 12"/></svg><b>起飞</b></span><span><svg viewBox="0 0 72 40" aria-hidden="true"><path d="M4 20h60m-10-8 10 8-10 8"/></svg><b>平飞</b></span><span><svg viewBox="0 0 72 40" aria-hidden="true"><path d="M4 6c22 24 30 28 60 28m-9-8 9 8-10 6"/></svg><b>降落</b></span></div><div class="deliverable"><span>预期交付</span><strong>多工况鸟翼运动数据</strong></div></article>
-</div><div class="merge-connector" aria-hidden="true"><span></span><b>↓</b><span></span></div>
-<article class="integration"><div class="integration-copy"><p class="eyebrow">03 / INTEGRATE & VALIDATE</p><h3>让真实运动，<br>在工程样机上得到验证。</h3><p>将多工况运动数据用于机构优化与样机验证，<br>逐步提高扑翼运动的仿生程度。</p></div><div class="iteration-loop"><div><span>01</span><b>真实数据</b></div><i>→</i><div><span>02</span><b>机构优化</b></div><i>→</i><div><span>03</span><b>样机验证</b></div><p><span>↶</span> 对照 · 改进 · 再验证</p></div></article>
+  <div class="section-heading"><div><p class="eyebrow">03 / THE NEXT CHAPTER</p><h2 id="next-title">Build. Understand. Bring together.</h2></div><p class="heading-note">Two parallel paths.<br> One integrated research platform.</p></div>
+  <div class="roadmap-tracks">
+    <article class="roadmap-card visual-roadmap">
+      <div class="roadmap-picture"><img src="media/engineering-concept.png" alt="Engineering concept of an articulated flapping-wing prototype and precision components" loading="lazy" width="1672" height="941"><span class="concept-badge">DESIGN CONCEPT</span></div>
+      <div class="roadmap-copy"><div class="roadmap-top"><span>01 / BUILD</span><span class="roadmap-arrow" aria-hidden="true">↗</span></div><h3>From model to prototype.</h3><p>Turn the articulated-wing design into a manufacturable, assembled mechanism.</p><div class="engineering-steps"><span><i>01</i>Engineer</span><b>→</b><span><i>02</i>Build</span><b>→</b><span><i>03</i>Validate</span></div><div class="deliverable"><span>DELIVERABLE</span><strong>A 3-joint, 5-DOF prototype</strong></div></div>
+    </article>
+    <article class="roadmap-card visual-roadmap">
+      <div class="roadmap-picture"><img src="media/flight-phases-concept.png" alt="Illustrated falcon flight phases: take-off, level flight and landing" loading="lazy" width="1672" height="941"><span class="concept-badge">ILLUSTRATIVE FLIGHT PHASES</span></div>
+      <div class="roadmap-copy"><div class="roadmap-top"><span>02 / UNDERSTAND</span><span class="roadmap-arrow" aria-hidden="true">↗</span></div><h3>Capture the full flight cycle.</h3><p>Extend real-bird motion measurements across three flight conditions.</p><div class="phase-labels"><span><i>↗</i>Take-off</span><span><i>→</i>Level flight</span><span><i>↘</i>Landing</span></div><div class="deliverable"><span>DELIVERABLE</span><strong>Multi-condition wing-motion data</strong></div></div>
+    </article>
+  </div>
+  <div class="merge-connector" aria-hidden="true"><span></span><b>↓</b><span></span></div>
+  <article class="integration visual-integration">
+    <div class="integration-copy"><p class="eyebrow">03 / INTEGRATE &amp; VALIDATE</p><h3>Close the loop<br> between nature and design.</h3><p>Use measured wing motion to refine the mechanism, then evaluate the physical prototype.</p>
+      <div class="integration-flow"><span>Measure</span><i>→</i><span>Optimize</span><i>→</i><span>Validate</span><i>↺</i></div>
+    </div>
+    <div class="validation-pair">
+      <figure><img src="media/flight-side.jpg" alt="Real falcon flight reference for future motion comparison" loading="lazy" width="1920" height="1080"><figcaption>Biological reference</figcaption></figure>
+      <span aria-hidden="true">⇄</span>
+      <figure><img src="media/mechanism.jpg" alt="Current mechanism simulation to inform future prototype development" loading="lazy" width="1920" height="1080"><figcaption>Mechanism model</figcaption></figure>
+    </div>
+  </article>
+  <p class="visual-disclosure">Concept illustrations communicate the research direction; they do not document completed hardware or experiments.</p>
 </div></section>
 </main>
-<footer class="site-footer wrap"><a class="footer-brand" href="#home">WING<span>仿生扑翼飞行项目</span></a><p>飞行平台 / 仿生机构 / 工程实现</p><a href="#home" class="back-top">返回顶部 ↑</a></footer>
-<dialog id="film-dialog" aria-labelledby="film-title"><div class="dialog-heading"><h2 id="film-title">项目影像</h2><button id="close-film" type="button" aria-label="关闭视频">关闭 <span>×</span></button></div><video id="dialog-video" controls playsinline preload="metadata"></video><p class="dialog-hint">ESC 关闭 · 可使用播放器切换全屏</p></dialog>
-<div id="notice" role="status" aria-live="polite" hidden></div><noscript><p class="noscript">视频放大功能需要 JavaScript；全部项目内容仍可直接浏览。</p></noscript>
-<script src="app.js"></script></body></html>
+<footer class="site-footer wrap"><a class="footer-brand" href="#home">WING<span>BIO-INSPIRED FLIGHT</span></a><p>FLIGHT / MECHANISMS / EXPERIMENTS</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+<dialog id="film-dialog" aria-labelledby="film-title"><div class="dialog-heading"><h2 id="film-title">Project film</h2><button id="close-film" type="button" aria-label="Close video">Close <span>×</span></button></div><video id="dialog-video" controls playsinline preload="metadata"></video><p class="dialog-hint">ESC to close · Use the player controls for fullscreen</p></dialog>
+<div id="notice" role="status" aria-live="polite" hidden></div><noscript><p class="noscript">Video enlargement requires JavaScript. All project content remains available to read.</p></noscript>
+<script src="app.js?v=20261001-en"></script>
+</body></html>

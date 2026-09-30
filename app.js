@@ -7,7 +7,8 @@ const hero = $('#hero-video'), heroToggle = $('#hero-toggle');
 const dialog = $('#film-dialog'), dialogVideo = $('#dialog-video');
 const onScreen = new Set();
 const playbackRates = { 'media/flight-side.mp4': 0.8, 'media/dlc-side.mp4': 0.5, 'media/trajectory-oblique.mp4': 0.75 };
-let heroPaused = false, noticeTimer, hubaraURL, focusedBeforeDialog;
+let heroPaused = false, noticeTimer, focusedBeforeDialog;
+const localSlots = [];
 function notify(message) {
   clearTimeout(noticeTimer);
   $('#notice').textContent = message;
@@ -33,7 +34,7 @@ document.addEventListener('visibilitychange', syncPlayback);
 motion.addEventListener('change', syncPlayback);
 function updateHeroControl() {
   heroToggle.textContent = hero.paused ? '▷' : 'Ⅱ';
-  heroToggle.setAttribute('aria-label', hero.paused ? '播放背景视频' : '暂停背景视频');
+  heroToggle.setAttribute('aria-label', hero.paused ? 'Play background video' : 'Pause background video');
 }
 hero.addEventListener('play', updateHeroControl);
 hero.addEventListener('pause', updateHeroControl);
@@ -67,45 +68,73 @@ dialog.addEventListener('close', () => {
   syncPlayback();
 });
 dialogVideo.addEventListener('error', () => {
-  if (dialogVideo.hasAttribute('src')) notify('视频未能读取。请确认 media 文件夹与网页保存在同一目录。');
+  if (dialogVideo.hasAttribute('src')) notify('Video unavailable. Keep the media folder alongside the website files.');
 });
-const hubara = $('#hubara-video');
-$('#hubara-file').addEventListener('change', event => {
-  const file = event.target.files?.[0];
-  if (!file) return;
-  if (!file.type.startsWith('video/') && !/\.(mp4|mov|webm|m4v)$/i.test(file.name)) {
-    notify('请选择 MP4、MOV 或 WebM 视频文件。'); return;
+['hubara', 'tunnel'].forEach(id => {
+  const input = $(`#${id}-file`), video = $(`#${id}-video`), placeholder = $(`#${id}-placeholder`);
+  if (!input || !video || !placeholder) return;
+  const slot = { video, url: null };
+  localSlots.push(slot);
+  function clearLocalVideo() {
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    if (slot.url) URL.revokeObjectURL(slot.url);
+    slot.url = null;
+    video.hidden = true;
+    placeholder.hidden = false;
   }
-  hubara.pause();
-  if (hubaraURL) URL.revokeObjectURL(hubaraURL);
-  hubaraURL = URL.createObjectURL(file);
-  hubara.src = hubaraURL;
-  hubara.hidden = false;
-  $('#hubara-placeholder').hidden = true;
-  hubara.muted = true;
-  attemptPlay(hubara);
-  notify('实飞视频已载入，仅用于本次本机预览，未上传或永久保存。');
+  slot.clear = clearLocalVideo;
+  input.addEventListener('change', event => {
+    const file = event.target.files?.[0];
+    input.value = '';
+    if (!file) return;
+    if (!file.type.startsWith('video/') && !/\.(mp4|mov|webm|m4v)$/i.test(file.name)) {
+      notify('Choose an MP4, MOV or WebM video file.'); return;
+    }
+    if (file.size === 0) {
+      notify('This file is empty. Please select another video.'); return;
+    }
+    clearLocalVideo();
+    slot.url = URL.createObjectURL(file);
+    video.src = slot.url;
+    video.hidden = false;
+    placeholder.hidden = true;
+    video.muted = true;
+    attemptPlay(video);
+    notify('Video loaded for local preview only. It has not been uploaded or published.');
+  });
+  video.addEventListener('error', () => {
+    if (!video.hasAttribute('src')) return;
+    clearLocalVideo();
+    notify('This video cannot be played. Try an H.264-encoded MP4 file.');
+  });
 });
-hubara.addEventListener('error', () => {
-  hubara.hidden = true;
-  $('#hubara-placeholder').hidden = false;
-  notify('此视频无法播放，建议使用 H.264 编码的 MP4 文件。');
-});
-$('.upload-button').addEventListener('keydown', event => {
-  if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); $('#hubara-file').click(); }
-});
+document.querySelectorAll('.upload-button').forEach(label => label.addEventListener('keydown', event => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    const input = document.getElementById(label.htmlFor);
+    if (input) { event.preventDefault(); input.click(); }
+  }
+}));
 $('#present').addEventListener('click', async () => {
   try {
     if (document.fullscreenElement) await document.exitFullscreen();
     else if (document.documentElement.requestFullscreen) await document.documentElement.requestFullscreen();
-    else notify('当前浏览器不支持网页全屏，请使用浏览器的全屏功能。');
-  } catch { notify('当前窗口未允许全屏。可在独立浏览器中打开本页后使用 F11。'); }
+    else notify('Page fullscreen is unavailable. Use your browser’s fullscreen option.');
+  } catch { notify('Fullscreen is not allowed in this window. Open the page in a browser and use F11.'); }
 });
 document.addEventListener('fullscreenchange', () => {
-  $('#present span').textContent = document.fullscreenElement ? '退出全屏' : '全屏汇报';
-  $('#present').setAttribute('aria-label', document.fullscreenElement ? '退出全屏汇报' : '进入全屏汇报');
+  $('#present span').textContent = document.fullscreenElement ? 'Exit fullscreen' : 'Present';
+  $('#present').setAttribute('aria-label', document.fullscreenElement ? 'Exit fullscreen presentation' : 'Enter fullscreen presentation');
 });
-window.addEventListener('pagehide', () => { ambient.forEach(video => video.pause()); dialogVideo.pause(); });
+window.addEventListener('pagehide', event => {
+  ambient.forEach(video => video.pause());
+  dialogVideo.pause();
+  localSlots.forEach(slot => {
+    slot.video.pause();
+    if (!event.persisted) slot.clear();
+  });
+});
 window.addEventListener('pageshow', syncPlayback);
 updateHeroControl();
 })();
