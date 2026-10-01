@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c1a1e">
 <meta name="description" content="RoboFalcon: the Houbara flying platform, bio-inspired wing mechanisms, motion capture and experimental development.">
-<title>RoboFalcon</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-refined">
+<title>RoboFalcon</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-parallel">
 </head>
 <body>
 <a class="skip-link" href="#achieved">Skip to project achievements</a>
@@ -112,9 +112,31 @@
 
 <section class="section section-light roadmap" id="next" aria-labelledby="next-title"><div class="wrap">
   <div class="section-heading"><div><p class="eyebrow">03 / FUTURE PLANS</p><h2 id="next-title">Close the loop between nature and design.</h2></div><a class="plan-jump" href="#plan">24-month plan <span aria-hidden="true"><span class="arrow" aria-hidden="true">↓</span></span></a></div>
-  <article class="loop-workflow future-stage future-capture" id="integration" data-future-step="capture" aria-labelledby="integration-title">
-    <header class="loop-heading"><div><p class="eyebrow">01 / CAPTURE</p><h3 id="integration-title">Wind-tunnel motion capture.</h3></div><span class="exploration-tag">PLANNED</span></header>
-    <p class="stage-intro">Robotic-bird validation <span class="arrow" aria-hidden="true">→</span> Real-falcon capture</p>
+  <div class="future-workstreams" aria-label="Three complementary research workstreams">
+    <article class="future-workstream" id="integration" data-future-step="capture" aria-labelledby="integration-title">
+      <header class="workstream-heading"><p class="eyebrow">01 / CAPTURE</p><h3 id="integration-title">Wind-tunnel motion capture.</h3></header>
+      <figure class="workstream-picture"><img src="media/wind-tunnel-concept.png" alt="Concept illustration of a multi-camera wind-tunnel setup, initially validated with a robotic bird" loading="lazy" width="1672" height="941"><figcaption class="image-caption">Capture setup <span>Concept study</span></figcaption></figure>
+      <div class="workstream-topics"><span>Calibrate</span><span>Synchronize</span><span>Track</span></div>
+      <div class="deliverable"><span>OUTPUT</span><strong>Falcon motion data</strong></div>
+    </article>
+    <article class="future-workstream" id="flight-phases" data-future-step="phases" aria-labelledby="phases-title">
+      <header class="workstream-heading"><p class="eyebrow">02 / FLIGHT CONDITIONS</p><h3 id="phases-title">Three flight conditions.</h3></header>
+      <figure class="workstream-picture"><img src="media/flight-phases-concept.png" alt="Illustrated falcon flight phases: take-off, level flight and landing" loading="lazy" width="1672" height="941"><figcaption class="image-caption">Flight phases <span>Illustration</span></figcaption></figure>
+      <div class="workstream-topics"><span>Take-off</span><span>Level flight</span><span>Landing</span></div>
+      <div class="deliverable"><span>OUTPUT</span><strong>Motion targets</strong></div>
+    </article>
+    <article class="future-workstream" id="prototype" data-future-step="prototype" aria-labelledby="prototype-title">
+      <header class="workstream-heading"><p class="eyebrow">03 / BUILD &amp; TEST</p><h3 id="prototype-title">From model to prototype.</h3></header>
+      <figure class="workstream-picture"><img src="media/engineering-concept.png" alt="Engineering concept of an articulated flapping-wing prototype and precision components" loading="lazy" width="1672" height="941"><figcaption class="image-caption">Prototype development <span>Concept study</span></figcaption></figure>
+      <div class="workstream-topics"><span>Build</span><span>Ground tests</span><span>Flight trials</span></div>
+      <div class="deliverable"><span>OUTPUT</span><strong>3 joints · 5 DOF</strong></div>
+    </article>
+  </div>
+  <p class="visual-disclosure">Illustrations show planned work.</p>
+
+  <details class="future-evidence">
+    <summary>Flight references</summary>
+    <div class="loop-workflow">
     <div class="loop-stages">
       <section class="loop-card capture-card" aria-labelledby="capture-title">
         <header><span class="loop-number">A</span><h4 id="capture-title">Record wing motion</h4><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9h8l2-4h6l2 4h6v18H4z"/><circle cx="16" cy="18" r="6"/></svg></header>
@@ -135,31 +157,17 @@
         <p class="loop-data-note">External research example—not project data.<br><a href="https://rs.figshare.com/articles/media/Supplementary_Movie_S2_from_Birds_both_avoid_and_control_collisions_by_harnessing_visually_guided_force_vectoring/19898226" target="_blank" rel="noopener noreferrer">Diana D. Chin &amp; David Lentink (2022), Movie S2</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · Excerpt; web-encoded.</p>
       </section>
     </div>
-  </article>
-  <div class="future-step-link" aria-hidden="true"><span class="arrow" aria-hidden="true">↓</span></div>
-  <article class="roadmap-card future-stage future-visual" id="flight-phases" data-future-step="phases" aria-labelledby="phases-title">
-    <figure class="roadmap-picture"><img src="media/flight-phases-concept.png" alt="Illustrated falcon flight phases: take-off, level flight and landing" loading="lazy" width="1672" height="941"><figcaption class="image-caption">Flight phases <span>Illustration</span></figcaption></figure>
-    <div class="roadmap-copy"><div class="roadmap-top"><span>02 / FLIGHT CONDITIONS</span></div><h3 id="phases-title">Three flight conditions.</h3><div class="phase-labels mini-flow"><span class="flow-mini"><strong>Take-off</strong></span><b aria-hidden="true"><span class="arrow" aria-hidden="true">→</span></b><span class="flow-mini"><strong>Level flight</strong></span><b aria-hidden="true"><span class="arrow" aria-hidden="true">→</span></b><span class="flow-mini"><strong>Landing</strong></span></div><div class="deliverable"><span>OUTPUT</span><strong>Motion targets</strong></div></div>
-  </article>
-  <div class="future-step-link" aria-hidden="true"><span class="arrow" aria-hidden="true">↓</span></div>
-  <article class="roadmap-card future-stage future-visual" id="prototype" data-future-step="prototype" aria-labelledby="prototype-title">
-    <figure class="roadmap-picture"><img src="media/engineering-concept.png" alt="Engineering concept of an articulated flapping-wing prototype and precision components" loading="lazy" width="1672" height="941"><figcaption class="image-caption">Prototype development <span>Concept study</span></figcaption></figure>
-    <div class="roadmap-copy"><div class="roadmap-top"><span>03 / BUILD &amp; TEST</span></div><h3 id="prototype-title">From model to prototype.</h3><div class="engineering-steps mini-flow"><span class="flow-mini"><strong>Design</strong></span><b aria-hidden="true"><span class="arrow" aria-hidden="true">→</span></b><span class="flow-mini"><strong>Build</strong></span><b aria-hidden="true"><span class="arrow" aria-hidden="true">→</span></b><span class="flow-mini"><strong>Ground &amp; flight tests</strong></span></div><div class="deliverable"><span>TARGET</span><strong>3 joints · 5 DOF</strong></div></div>
-  </article>
-  <div class="loop-feedback"><span aria-hidden="true"><span class="arrow" aria-hidden="true">↶</span></span><p>Tests inform the next design cycle.</p><span aria-hidden="true"><span class="arrow" aria-hidden="true">↵</span></span></div>
-  <p class="visual-disclosure">Illustrations show planned work.</p>
+    </div>
+  </details>
 
   <article class="delivery-plan" id="plan" aria-labelledby="plan-title">
     <header class="plan-heading"><div><p class="eyebrow">PROPOSED SCHEDULE</p><h3 id="plan-title">Two-year development plan.</h3></div><div class="plan-target"><strong>24</strong><span>months<br>from kickoff</span></div></header>
-    <div class="gantt-chart" role="group" aria-label="Proposed Gantt chart, months 1 to 24 from project kickoff">
-      <div class="gantt-header"><span>Workstream / months</span><div class="gantt-scale" aria-hidden="true"><span>6</span><span>12</span><span>18</span><span>24</span></div></div>
-      <div class="gantt-row"><div class="gantt-task"><strong>Validate capture</strong><small>M01–06</small></div><div class="gantt-track" aria-hidden="true"><span class="gantt-bar" style="--start:1;--duration:6"></span></div></div>
-      <div class="gantt-row"><div class="gantt-task"><strong>Falcon motion capture</strong><small>M07–12</small></div><div class="gantt-track" aria-hidden="true"><span class="gantt-bar" style="--start:7;--duration:6"></span></div></div>
-      <div class="gantt-row"><div class="gantt-task"><strong>Design for manufacture</strong><small>M07–12</small></div><div class="gantt-track" aria-hidden="true"><span class="gantt-bar" style="--start:7;--duration:6"></span></div></div>
-      <div class="gantt-row"><div class="gantt-task"><strong>Fabricate &amp; integrate</strong><small>M13–18</small></div><div class="gantt-track" aria-hidden="true"><span class="gantt-bar" style="--start:13;--duration:6"></span></div></div>
-      <div class="gantt-row"><div class="gantt-task"><strong>Ground experiments</strong><small>M16–21</small></div><div class="gantt-track" aria-hidden="true"><span class="gantt-bar" style="--start:16;--duration:6"></span></div></div>
-      <div class="gantt-row"><div class="gantt-task"><strong>Flight trials &amp; refinement</strong><small>M19–24</small></div><div class="gantt-track" aria-hidden="true"><span class="gantt-bar" style="--start:19;--duration:6"></span></div></div>
-    </div>
+    <ol class="project-timeline" aria-label="Four development phases, months from project kickoff">
+      <li><span class="timeline-month">M01–06</span><strong>Validate</strong></li>
+      <li><span class="timeline-month">M07–12</span><strong>Design</strong></li>
+      <li><span class="timeline-month">M13–18</span><strong>Build</strong></li>
+      <li><span class="timeline-month">M19–24</span><strong>Test &amp; fly</strong></li>
+    </ol>
     <div class="prototype-target"><svg viewBox="0 0 40 32" aria-hidden="true"><path d="M3 5 12 26 20 14 28 26 37 5M10 5l6 11m14-11-6 11M20 14v14"/></svg><div><span class="mini-label">DELIVERABLE</span><strong>3-joint, 5-DOF robotic bird engineering prototype</strong></div></div>
     <section class="resource-note" aria-labelledby="budget-title">
       <h4 id="budget-title">Resources</h4>
@@ -172,5 +180,5 @@
 <footer class="site-footer wrap"><a class="footer-brand" href="#home">RoboFalcon<span>BIO-INSPIRED FLIGHT</span></a><p>FLIGHT / MECHANISMS / EXPERIMENTS</p><a href="#home" class="back-top">Back to top <span class="arrow" aria-hidden="true">↑</span></a></footer>
 <dialog id="film-dialog" aria-labelledby="film-title"><div class="dialog-heading"><h2 id="film-title">Project film</h2><button id="close-film" type="button" aria-label="Close video">Close <span>×</span></button></div><video id="dialog-video" controls playsinline preload="metadata"></video><p class="dialog-hint">ESC to close · Use the player controls for fullscreen</p></dialog>
 <div id="notice" role="status" aria-live="polite" hidden></div><noscript><p class="noscript">Video enlargement requires JavaScript. All project content remains available to read.</p></noscript>
-<script src="app.js?v=20261001-refined"></script>
+<script src="app.js?v=20261001-parallel"></script>
 </body></html>
