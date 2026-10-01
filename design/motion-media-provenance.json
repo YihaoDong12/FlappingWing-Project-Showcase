@@ -1,0 +1,26 @@
+{
+  "updated": "2026-10-01",
+  "rear_tracking": {
+    "website_asset": "media/dlc-rear.mp4",
+    "source_web_asset": "Falcon_Supplementary_Website/public/media/web/dlc-front.mp4",
+    "source_recording": "Back2-Dong-2026-03-30/videos/03302DLC_Resnet50_Back2Mar30shuffle6_detector_best-50_snapshot_best-30_filtered_p60_labeled.mp4",
+    "verification": "The original source_media/02_dlc/front/source.mp4 matches the Back2 labelled recording by SHA256. Rear view confirmed visually. The legacy front filename does not describe the recording viewpoint.",
+    "playback_rate": 0.5
+  },
+  "motion_reference": {
+    "public_data": "https://yihaodong12.github.io/Falcon-Mechanism-Supplementary/data/target-curves.csv",
+    "data_sha256": "680B1032147F1306D7BB9665EE4973531CE2D8076EFBBEA1C2F52DEF3EAEEF73",
+    "research_source": "nature_length_normalized_report_20260804/optimization_target/Length_normalized_target_curve_mm.csv",
+    "render_script": "Falcon_Supplementary_Website/scripts/build_trajectory_videos.py",
+    "samples": 360,
+    "processing": "Tracked flight data, reconstructed and length-normalized as a second-order Fourier design reference. Not raw tracking points or a stereo-metrically calibrated measurement.",
+    "coordinates": { "X": "lateral", "Y": "toward the head", "Z": "dorsal" },
+    "views": {
+      "media/trajectory-front.mp4": "X-Z projection",
+      "media/trajectory-side.mp4": "Y-Z projection",
+      "media/trajectory-top.mp4": "X-Y projection",
+      "media/trajectory-oblique.mp4": "Orthographic XYZ view, equal axis scale"
+    },
+    "playback_rate": 0.75
+  }
+}

@@ -3,10 +3,19 @@
 const $ = selector => document.querySelector(selector);
 const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const ambient = [...document.querySelectorAll('.ambient-video')];
+const trajectoryViews = [...document.querySelectorAll('.trajectory-grid video')];
 const hero = $('#hero-video'), heroToggle = $('#hero-toggle');
 const dialog = $('#film-dialog'), dialogVideo = $('#dialog-video');
 const onScreen = new Set();
-const playbackRates = { 'media/flight-side.mp4': 0.8, 'media/dlc-side.mp4': 0.5, 'media/trajectory-oblique.mp4': 0.75 };
+const playbackRates = {
+  'media/flight-side.mp4': 0.8,
+  'media/dlc-side.mp4': 0.5,
+  'media/dlc-rear.mp4': 0.5,
+  'media/trajectory-front.mp4': 0.75,
+  'media/trajectory-side.mp4': 0.75,
+  'media/trajectory-top.mp4': 0.75,
+  'media/trajectory-oblique.mp4': 0.75
+};
 let heroPaused = false, noticeTimer, focusedBeforeDialog;
 const localSlots = [];
 function notify(message) {
@@ -30,6 +39,15 @@ const observer = new IntersectionObserver(entries => {
   syncPlayback();
 }, { threshold: 0.18 });
 ambient.forEach(video => { video.muted = true; video.playbackRate = playbackRates[video.getAttribute('src')] || 1; observer.observe(video); });
+// Keep the visible projections on the same motion phase without playing off-screen media.
+trajectoryViews.forEach(video => video.addEventListener('timeupdate', () => {
+  if (motion.matches || document.hidden || dialog.open) return;
+  const visible = trajectoryViews.filter(view => onScreen.has(view) && view.readyState >= 2);
+  if (visible[0] !== video || video.paused) return;
+  visible.slice(1).forEach(view => {
+    if (!view.seeking && Math.abs(view.currentTime - video.currentTime) > 0.15) view.currentTime = video.currentTime;
+  });
+}));
 document.addEventListener('visibilitychange', syncPlayback);
 motion.addEventListener('change', syncPlayback);
 function updateHeroControl() {
