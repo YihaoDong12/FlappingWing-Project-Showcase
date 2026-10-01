@@ -513,7 +513,7 @@ dialog::backdrop { background: #030d12e8; backdrop-filter: blur(12px); }
 .footer-brand { letter-spacing: .3px; font-weight: 550; }
 .footer-brand > span { font-weight: 400; }
 .platform-film .film-screen { aspect-ratio: 16 / 9; background: #102227; border-color: #819481; }
-.platform-film #houbara-video, .robotbird-film #tunnel-video { position: static; width: 100%; height: 100%; object-fit: contain; }
+.platform-film #basic-platform-video, .robotbird-film #tunnel-video { position: static; width: 100%; height: 100%; object-fit: contain; }
 .platform-film figcaption { color: #425b3d; }
 .platform-film figcaption > span:last-child { color: #677e58; }
 
@@ -1059,6 +1059,12 @@ dialog::backdrop { background: #030d12e8; backdrop-filter: blur(12px); }
 @media (max-width: 360px) {
   #next .future-notes { grid-template-columns: minmax(0,1fr); gap: 4px; }
   #next .future-notes > .future-evidence:not([open]) { justify-self: start; }
+}
+
+@media (max-width: 360px) {
+  #achieved .platform-details { grid-template-columns: minmax(0,1fr); }
+  #achieved .platform-stats { grid-column: 1; grid-row: auto; justify-self: start; border-left: 0; padding: 8px 0 12px; gap: 28px; }
+  #achieved .platform-stats > div { flex-direction: row; align-items: baseline; gap: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
