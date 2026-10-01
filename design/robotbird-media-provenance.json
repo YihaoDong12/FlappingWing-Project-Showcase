@@ -1,0 +1,30 @@
+{
+  "updated": "2026-10-01",
+  "source": "User-provided robotbird.mp4",
+  "source_sha256": "60B6410AD7A91712504D53B003DBB66AA71CBD4A6755F94AA9C451A21AB741B3",
+  "source_unchanged": true,
+  "selection": {
+    "first_frame_zero_based": 511,
+    "end_frame_exclusive": 774,
+    "fps": 30,
+    "start_seconds": 17.0333333333,
+    "end_seconds_exclusive": 25.8,
+    "description": "Close view of the robotic bird with colored tracking keypoints, skeleton connections and tracking bounding box. Unmarked introductory segments omitted.",
+    "context": "Indoor robotic-bird tracking footage supplied for the wind-tunnel exploration section. A wind-tunnel enclosure cannot be independently identified from the selected frames."
+  },
+  "website_video": "media/robotbird-tracked.mp4",
+  "website_poster": "media/robotbird-tracked.jpg",
+  "poster_source_seconds": 18.2,
+  "output": {
+    "duration_seconds": 8.7666666667,
+    "frames": 263,
+    "width": 1920,
+    "height": 1080,
+    "codec": "H.264 High",
+    "pixel_format": "yuv420p",
+    "audio": false,
+    "faststart": true,
+    "cropping": "none",
+    "tracking_markers": "preserved"
+  }
+}

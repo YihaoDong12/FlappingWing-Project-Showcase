@@ -88,7 +88,7 @@ dialog.addEventListener('close', () => {
 dialogVideo.addEventListener('error', () => {
   if (dialogVideo.hasAttribute('src')) notify('Video unavailable. Keep the media folder alongside the website files.');
 });
-['hubara', 'tunnel'].forEach(id => {
+['hubara'].forEach(id => {
   const input = $(`#${id}-file`), video = $(`#${id}-video`), placeholder = $(`#${id}-placeholder`);
   if (!input || !video || !placeholder) return;
   const slot = { video, url: null };

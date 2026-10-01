@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c1a1e">
 <meta name="description" content="Bio-inspired flight: the Hubara flying platform, articulated wing mechanisms, wind-tunnel measurement exploration, and the path to engineering prototypes.">
-<title>WING / Bio-inspired Flight</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-motion">
+<title>WING / Bio-inspired Flight</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-capture">
 </head>
 <body>
 <a class="skip-link" href="#achieved">Skip to project achievements</a>
@@ -76,11 +76,7 @@
     <p class="experiment-intro">A robotic-bird surrogate helps develop camera settings, hardware selection and test procedures for future real-bird motion measurements.</p>
     <div class="tunnel-grid">
       <figure class="tunnel-visual"><div class="concept-screen"><img src="media/wind-tunnel-concept.png" alt="Concept illustration of a robotic bird in a wind-tunnel test section, viewed by two cameras" loading="lazy" width="1672" height="941"><span class="concept-badge">SETUP CONCEPT</span></div><figcaption>Multi-camera capture<span>Robotic-bird surrogate</span></figcaption></figure>
-      <div class="hubara-stage tunnel-stage" id="tunnel-panel"><div class="stage-corners" aria-hidden="true"></div>
-        <div id="tunnel-placeholder"><span class="tunnel-wordmark">WIND TUNNEL</span><div class="placeholder-ring" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 6 9 6-9 6z"/></svg></div><p>Robotic-bird flight trial</p><small>Video coming soon</small></div>
-        <video id="tunnel-video" controls playsinline preload="metadata" hidden aria-label="Robotic-bird wind-tunnel flight video"></video>
-        <div class="stage-caption"><span><i></i> EXPERIMENT FOOTAGE</span><label for="tunnel-file" class="upload-button" tabindex="0">Preview a video <span>＋</span></label><input id="tunnel-file" type="file" accept="video/*,.mp4,.mov,.webm" hidden></div>
-      </div>
+      <figure class="film-card robotbird-film" id="tunnel-panel"><div class="film-screen"><video id="tunnel-video" class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/robotbird-tracked.jpg" src="media/robotbird-tracked.mp4" aria-label="Robotic-bird flight trial with tracking markers"></video><button class="expand-button" type="button" data-film="media/robotbird-tracked.mp4" data-title="Robotic-bird flight trial / Marked motion capture" aria-label="Enlarge marked robotic-bird flight video">↗</button></div><figcaption><span>Robotic-bird flight trial</span><span>MARKER TRACKING</span></figcaption></figure>
     </div>
     <div class="experiment-focus" aria-label="Experimental preparation priorities">
       <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 8h7l2-3h6l2 3h5v19H5z"/><circle cx="16" cy="17" r="6"/></svg><span><strong>Camera setup</strong><small>Frame rate · Exposure · Synchronization</small></span></div>
@@ -103,15 +99,30 @@
     </article>
   </div>
   <div class="merge-connector" aria-hidden="true"><span></span><b>↓</b><span></span></div>
-  <article class="integration visual-integration">
-    <div class="integration-copy"><p class="eyebrow">03 / INTEGRATE &amp; VALIDATE</p><h3>Nature ⇄ Design</h3>
-      <div class="integration-flow"><span>Measure</span><i>→</i><span>Optimize</span><i>→</i><span>Validate</span><i>↺</i></div>
+  <article class="loop-workflow" id="integration" aria-labelledby="integration-title">
+    <header class="loop-heading"><div><p class="eyebrow">03 / INTEGRATE &amp; VALIDATE</p><h3 id="integration-title">Close the loop between nature and design.</h3></div><span class="exploration-tag">PLANNED WORKFLOW</span></header>
+    <div class="loop-stages">
+      <section class="loop-card capture-card" aria-labelledby="capture-title">
+        <header><span class="loop-number">01</span><h4 id="capture-title">Capture natural flapping</h4><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9h8l2-4h6l2 4h6v18H4z"/><circle cx="16" cy="18" r="6"/></svg></header>
+        <div class="loop-capture-body">
+          <div class="capture-rig"><svg viewBox="0 0 120 152" role="img" aria-label="Concept diagram of a bird observed by two synchronized cameras"><path class="rig-frame" d="M10 140V10h100v130M17 133V17h86v116M3 140h114"/><path class="rig-sight" d="m24 30 37 53 35-53M24 30l57 53M96 30 41 83"/><rect x="14" y="24" width="19" height="12" rx="2"/><rect x="87" y="24" width="19" height="12" rx="2"/><path class="rig-bird" d="m21 65 24 18 15-9 15 9 24-18-19 30-20-9-20 9zM60 85v18"/><circle cx="45" cy="83" r="3"/><circle cx="60" cy="78" r="3"/><circle cx="75" cy="83" r="3"/><path class="rig-frame" d="M40 116h40m-30 0v18m20-18v18"/></svg><span>Multi-view capture</span></div>
+          <span class="capture-arrow" aria-hidden="true">→</span>
+          <figure class="film-card loop-reference-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/flight-side.jpg" src="media/flight-side.mp4" aria-label="Real bird flapping as a biological motion reference"></video><button class="expand-button" type="button" data-film="media/flight-side.mp4" data-title="Biological reference / Natural flapping" aria-label="Enlarge natural bird flight video">↗</button></div><figcaption>Project flight reference</figcaption></figure>
+        </div>
+        <div class="loop-tags"><span>Take-off</span><span>Level flight</span><span>Landing</span></div>
+      </section>
+      <span class="loop-link" aria-hidden="true">→</span>
+      <section class="loop-card analysis-card" aria-labelledby="analysis-title">
+        <header><span class="loop-number">02</span><h4 id="analysis-title">Analyze flapping characteristics</h4><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 4v23h24M8 21l6-8 6 5 7-12"/><circle cx="14" cy="13" r="2"/><circle cx="20" cy="18" r="2"/></svg></header>
+        <div class="loop-analysis-body">
+          <figure class="film-card loop-analysis-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/bird-flight-analysis.jpg" src="media/bird-flight-analysis.mp4" aria-label="External research example comparing two bird flights with measured force vectors"></video><button class="expand-button" type="button" data-film="media/bird-flight-analysis.mp4" data-title="External research / Chin &amp; Lentink (2022), Movie S2" aria-label="Enlarge external bird-flight analysis video">↗</button></div></figure>
+          <div class="analysis-outputs"><span><svg viewBox="0 0 40 32" aria-hidden="true"><path d="M5 26V5m0 21h30M5 26l14-14m-8 8c-4-14 15-19 18-6s-7 20-18 6"/></svg>Wing paths</span><span><svg viewBox="0 0 40 32" aria-hidden="true"><path d="m5 25 11-17 11 12 8-10"/><circle cx="5" cy="25" r="3"/><circle cx="16" cy="8" r="3"/><circle cx="27" cy="20" r="3"/></svg>Joint coordination</span><span><svg viewBox="0 0 40 32" aria-hidden="true"><path d="M30 10a11 11 0 1 0 1 11M24 10h7V3"/><path d="M20 9v8l6 3"/></svg>Flapping cycle</span></div>
+        </div>
+        <p class="loop-data-note">External research example—not project data.<br><a href="https://rs.figshare.com/articles/media/Supplementary_Movie_S2_from_Birds_both_avoid_and_control_collisions_by_harnessing_visually_guided_force_vectoring/19898226" target="_blank" rel="noopener noreferrer">Diana D. Chin &amp; David Lentink (2022), Movie S2</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · Excerpt; web-encoded.</p>
+      </section>
     </div>
-    <div class="validation-pair">
-      <figure><img src="media/flight-side.jpg" alt="Real falcon flight reference for future motion comparison" loading="lazy" width="1920" height="1080"><figcaption>Biological reference</figcaption></figure>
-      <span aria-hidden="true">⇄</span>
-      <figure><img src="media/mechanism.jpg" alt="Current mechanism simulation to inform future prototype development" loading="lazy" width="1920" height="1080"><figcaption>Mechanism model</figcaption></figure>
-    </div>
+    <div class="loop-transfer" aria-label="Planned feedback loop from biological analysis through design and testing"><span><b>Motion targets</b><small>From measured flight</small></span><i aria-hidden="true">→</i><span><b>Mechanism design</b><small>3 joints · 5 DOF</small></span><i aria-hidden="true">→</i><span><b>Prototype tests</b><small>Compare &amp; refine</small></span></div>
+    <div class="loop-feedback"><span aria-hidden="true">↶</span><p>Test results guide the next capture and design cycle.</p><span aria-hidden="true">↵</span></div>
   </article>
   <p class="visual-disclosure">Concept illustrations show planned directions, not completed hardware or experiments.</p>
 </div></section>
@@ -119,5 +130,5 @@
 <footer class="site-footer wrap"><a class="footer-brand" href="#home">WING<span>BIO-INSPIRED FLIGHT</span></a><p>FLIGHT / MECHANISMS / EXPERIMENTS</p><a href="#home" class="back-top">Back to top ↑</a></footer>
 <dialog id="film-dialog" aria-labelledby="film-title"><div class="dialog-heading"><h2 id="film-title">Project film</h2><button id="close-film" type="button" aria-label="Close video">Close <span>×</span></button></div><video id="dialog-video" controls playsinline preload="metadata"></video><p class="dialog-hint">ESC to close · Use the player controls for fullscreen</p></dialog>
 <div id="notice" role="status" aria-live="polite" hidden></div><noscript><p class="noscript">Video enlargement requires JavaScript. All project content remains available to read.</p></noscript>
-<script src="app.js?v=20261001-motion"></script>
+<script src="app.js?v=20261001-capture"></script>
 </body></html>

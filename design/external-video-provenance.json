@@ -1,0 +1,21 @@
+{
+  "added": "2026-10-01",
+  "asset": "media/bird-flight-analysis.mp4",
+  "poster": "media/bird-flight-analysis.jpg",
+  "title": "Supplementary Movie S2 from Birds both avoid and control collisions by harnessing visually guided force vectoring",
+  "authors": ["Diana D. Chin", "David Lentink"],
+  "year": 2022,
+  "article_doi": "https://doi.org/10.1098/rsif.2021.0947",
+  "source_page": "https://rs.figshare.com/articles/media/Supplementary_Movie_S2_from_Birds_both_avoid_and_control_collisions_by_harnessing_visually_guided_force_vectoring/19898226",
+  "metadata_api": "https://api.figshare.com/v2/articles/19898226",
+  "download_url": "https://ndownloader.figshare.com/files/35317479",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_verification": "The official Royal Society Figshare item explicitly assigns CC BY 4.0 to this supplementary video.",
+  "source_md5": "7DAB10838C0400DCEDCB59B9E03EC1ED",
+  "source_sha256": "74BC50609B6198A1A90DC54BB7D8409BE4AD88F9BAE8D8BCAC16290D7DD1B80D",
+  "output_sha256": "E2E1333A54A24345CA38860D6B4E877808ADF541793F51416E54AD405F0C163D",
+  "changes": "Action excerpt from source 4.004 to 32.1321 seconds (frames 120-962 inclusive), duration 28.1281 seconds. Opening title card omitted for immediate action playback; authors, source, license and excerpt credit provided beside the video. Resized from 1920x1080 to 1280x720 using Lanczos and web-encoded as H.264 High/yuv420p, CRF22, faststart. All action, force annotations, legends and playback rate preserved; no cropping. Poster extracted at source 13 seconds (excerpt 8.996 seconds).",
+  "context": "External literature illustration of flight and measured force analysis. Two flights over and under an obstacle are superimposed in the original movie. Not wind-tunnel footage, not project test data, and not an analysis derived from the adjacent project falcon clip.",
+  "attribution": "Diana D. Chin & David Lentink (2022), Movie S2, CC BY 4.0; excerpt, web-encoded. Source and license linked next to the website video."
+}
