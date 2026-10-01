@@ -1007,6 +1007,60 @@ dialog::backdrop { background: #030d12e8; backdrop-filter: blur(12px); }
   .flow-cards .flow-number { letter-spacing: .3px; }
 }
 
+/* Compact future overview: preserve full images and type while removing stacked space. */
+#next > .wrap > .chapter-heading { padding-bottom: 14px; margin-bottom: 18px; }
+#next .workstream-heading { padding: 12px 14px; min-height: 0; }
+#next .workstream-picture .image-caption { padding: 4px 10px; }
+#next .workstream-topics { padding: 9px 14px; gap: 6px; }
+#next .workstream-topics > span { padding: 3px 6px; }
+#next .future-workstream > .deliverable { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 3px 9px; margin-inline: 14px; padding-block: 8px 10px; }
+#next .future-notes { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 9px 16px; margin-top: 9px; }
+#next .future-notes > .visual-disclosure { margin: 0; }
+#next .future-notes > .future-evidence { margin: 0; border: 0; background: transparent; }
+#next .future-notes > .future-evidence > summary { gap: 9px; padding: 4px 0; border-bottom: 1px solid #b99d80; color: #815b3e; font-size: var(--fs-label); }
+#next .future-notes > .future-evidence > summary::after { color: #8a6343; font-size: var(--fs-subtitle); }
+#next .future-notes > .future-evidence > summary:hover { background: transparent; color: #533b29; }
+#next .future-notes > .future-evidence[open] { grid-column: 1 / -1; grid-row: 2; border: 1px solid #7a6653; background: #342c25; }
+#next .future-notes > .future-evidence[open] > summary { padding: 11px 14px; border-bottom-color: #77614e; color: #ead8c2; }
+#next .future-notes > .future-evidence[open] > summary::after { color: #d9b58f; }
+#next .delivery-plan { margin-top: 18px; padding: 18px; }
+#next .plan-heading { display: block; }
+#next .plan-heading > div { min-width: 0; }
+#next .plan-duration { margin-top: 7px; color: #755e4b; font-size: var(--fs-label); line-height: 1.4; }
+#next .delivery-summary { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: 18px; margin-top: 15px; }
+#next .delivery-summary > .prototype-target { margin: 0; padding: 11px 13px; gap: 12px; }
+#next .delivery-summary > .prototype-target > svg { width: 40px; height: 36px; }
+#next .delivery-summary > .resource-note { margin: 0; padding: 8px 0 8px 18px; border-top: 0; border-left: 1px solid #d8c8b2; }
+#next .delivery-summary .resource-note h4 { margin-bottom: 4px; }
+#next .delivery-summary .resource-note p { line-height: 1.5; }
+#next .delivery-plan > .plan-note { margin-top: 12px; padding-top: 9px; }
+@media (min-width: 1000px) {
+  #next .delivery-plan { display: grid; grid-template-columns: 300px minmax(0,1fr); align-items: center; gap: 14px 24px; }
+  #next .delivery-plan > .plan-heading { grid-column: 1; grid-row: 1; }
+  #next .delivery-plan > .project-timeline { grid-column: 2; grid-row: 1; margin: 0; }
+  #next .delivery-plan > .delivery-summary { grid-column: 1 / -1; margin: 0; }
+  #next .delivery-plan > .plan-note { grid-column: 1 / -1; margin: 0; }
+}
+@media (max-width: 760px) {
+  #next .future-workstream { margin-bottom: 12px; }
+  #next .future-workstream:last-child { margin-bottom: 0; }
+  #next .workstream-heading { padding-block: 11px; }
+  #next .delivery-plan { padding: 16px; margin-top: 15px; }
+}
+@media (max-width: 600px) {
+  #next .workstream-topics { padding-block: 8px; }
+  #next .future-workstream > .deliverable { padding-block: 8px 9px; }
+  #next .future-notes { column-gap: 12px; }
+  #next .delivery-summary { grid-template-columns: minmax(0,1fr); gap: 11px; margin-top: 13px; }
+  #next .delivery-summary > .prototype-target { align-items: center; padding: 10px 12px; }
+  #next .delivery-summary > .resource-note { border-left: 0; padding: 0; }
+  #next .delivery-plan > .plan-note { margin-top: 10px; padding-top: 8px; }
+}
+@media (max-width: 360px) {
+  #next .future-notes { grid-template-columns: minmax(0,1fr); gap: 4px; }
+  #next .future-notes > .future-evidence:not([open]) { justify-self: start; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *:before, *:after { transition: none !important; animation: none !important; }
