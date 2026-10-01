@@ -17,7 +17,6 @@ const playbackRates = {
   'media/trajectory-oblique.mp4': 0.75
 };
 let heroPaused = false, noticeTimer, focusedBeforeDialog;
-const localSlots = [];
 function notify(message) {
   clearTimeout(noticeTimer);
   $('#notice').textContent = message;
@@ -88,52 +87,6 @@ dialog.addEventListener('close', () => {
 dialogVideo.addEventListener('error', () => {
   if (dialogVideo.hasAttribute('src')) notify('Video unavailable. Keep the media folder alongside the website files.');
 });
-['hubara'].forEach(id => {
-  const input = $(`#${id}-file`), video = $(`#${id}-video`), placeholder = $(`#${id}-placeholder`);
-  if (!input || !video || !placeholder) return;
-  const slot = { video, url: null };
-  localSlots.push(slot);
-  function clearLocalVideo() {
-    video.pause();
-    video.removeAttribute('src');
-    video.load();
-    if (slot.url) URL.revokeObjectURL(slot.url);
-    slot.url = null;
-    video.hidden = true;
-    placeholder.hidden = false;
-  }
-  slot.clear = clearLocalVideo;
-  input.addEventListener('change', event => {
-    const file = event.target.files?.[0];
-    input.value = '';
-    if (!file) return;
-    if (!file.type.startsWith('video/') && !/\.(mp4|mov|webm|m4v)$/i.test(file.name)) {
-      notify('Choose an MP4, MOV or WebM video file.'); return;
-    }
-    if (file.size === 0) {
-      notify('This file is empty. Please select another video.'); return;
-    }
-    clearLocalVideo();
-    slot.url = URL.createObjectURL(file);
-    video.src = slot.url;
-    video.hidden = false;
-    placeholder.hidden = true;
-    video.muted = true;
-    attemptPlay(video);
-    notify('Video loaded for local preview only. It has not been uploaded or published.');
-  });
-  video.addEventListener('error', () => {
-    if (!video.hasAttribute('src')) return;
-    clearLocalVideo();
-    notify('This video cannot be played. Try an H.264-encoded MP4 file.');
-  });
-});
-document.querySelectorAll('.upload-button').forEach(label => label.addEventListener('keydown', event => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    const input = document.getElementById(label.htmlFor);
-    if (input) { event.preventDefault(); input.click(); }
-  }
-}));
 $('#present').addEventListener('click', async () => {
   try {
     if (document.fullscreenElement) await document.exitFullscreen();
@@ -145,13 +98,9 @@ document.addEventListener('fullscreenchange', () => {
   $('#present span').textContent = document.fullscreenElement ? 'Exit fullscreen' : 'Present';
   $('#present').setAttribute('aria-label', document.fullscreenElement ? 'Exit fullscreen presentation' : 'Enter fullscreen presentation');
 });
-window.addEventListener('pagehide', event => {
+window.addEventListener('pagehide', () => {
   ambient.forEach(video => video.pause());
   dialogVideo.pause();
-  localSlots.forEach(slot => {
-    slot.video.pause();
-    if (!event.persisted) slot.clear();
-  });
 });
 window.addEventListener('pageshow', syncPlayback);
 updateHeroControl();

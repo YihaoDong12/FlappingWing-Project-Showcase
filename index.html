@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c1a1e">
-<meta name="description" content="Bio-inspired flight: the Hubara flying platform, articulated wing mechanisms, wind-tunnel measurement exploration, and the path to engineering prototypes.">
-<title>WING / Bio-inspired Flight</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-capture">
+<meta name="description" content="RoboFalcon: the Houbara flying platform, bio-inspired wing mechanisms, motion capture and experimental development.">
+<title>RoboFalcon</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-robofalcon">
 </head>
 <body>
 <a class="skip-link" href="#achieved">Skip to project achievements</a>
 <header class="site-header">
-  <a class="brand" href="#home" aria-label="WING project home"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 3 12 24 20 11 28 24 38 3M10 3 15 14M30 3 25 14"/></svg><span>WING<small>BIO-INSPIRED FLIGHT</small></span></a>
+  <a class="brand" href="#home" aria-label="RoboFalcon project home"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 3 12 24 20 11 28 24 38 3M10 3 15 14M30 3 25 14"/></svg><span>RoboFalcon<small>BIO-INSPIRED FLIGHT</small></span></a>
   <nav aria-label="Project chapters"><a href="#achieved"><span>01</span> Achievements</a><a href="#progress"><span>02</span> In progress</a><a href="#next"><span>03</span> Roadmap</a></nav>
   <button class="presentation-button" id="present" type="button" aria-label="Enter presentation fullscreen"><span>Present</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></button>
 </header>
@@ -17,8 +17,8 @@
   <div class="hero-visual"><video id="hero-video" class="ambient-video" autoplay muted loop playsinline preload="auto" poster="media/flight-side.jpg" src="media/flight-side.mp4" aria-label="Real falcon flight reference"></video></div>
   <div class="hero-content wrap">
     <p class="eyebrow"><span class="small-line"></span> BIO-INSPIRED FLIGHT PROGRAM</p>
-    <h1 id="hero-title">Flight proven.<br> <span>Nature inspired.</span></h1>
-    <p class="hero-description">A flying platform. More lifelike wing motion.</p>
+    <h1 id="hero-title">Robo<span>Falcon</span></h1>
+    <p class="hero-description">Flight proven. Nature inspired.<br>More lifelike wing motion.</p>
     <a class="primary-link" href="#achieved">Explore the program <span aria-hidden="true">↗</span></a>
   </div>
   <div class="hero-caption"><span class="live-dot"></span> FALCON / FLIGHT REFERENCE<button type="button" class="icon-button" id="hero-toggle" aria-label="Pause background video">Ⅱ</button></div>
@@ -33,12 +33,8 @@
 <section class="section section-light" id="achieved" aria-labelledby="achieved-title"><div class="wrap">
   <div class="section-heading"><div><p class="eyebrow">01 / THE FOUNDATION</p><h2 id="achieved-title">Flight is the starting point.</h2></div><span class="status"><i></i> Flight demonstrated</span></div>
   <div class="platform-layout">
-    <div class="hubara-stage" id="hubara-panel"><div class="stage-corners" aria-hidden="true"></div>
-      <div id="hubara-placeholder"><span class="hubara-wordmark">HUBARA</span><div class="placeholder-ring" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 6 9 6-9 6z"/></svg></div><p>Flight demonstrated</p><small>Video coming soon</small></div>
-      <video id="hubara-video" controls playsinline preload="metadata" hidden aria-label="Hubara flight demonstration"></video>
-      <div class="stage-caption"><span><i></i> HUBARA PLATFORM</span><label for="hubara-file" class="upload-button" tabindex="0">Preview a video <span>＋</span></label><input id="hubara-file" type="file" accept="video/*,.mp4,.mov,.webm" hidden></div>
-    </div>
-    <div class="platform-details"><p class="eyebrow">EXISTING PLATFORM</p><h3>Hubara</h3>
+    <figure class="film-card platform-film" id="houbara-panel"><div class="film-screen"><video id="houbara-video" class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/houbara-platform.jpg" src="media/houbara-platform.mp4" aria-label="Houbara platform wing-motion demonstration on a bench stand"></video><button class="expand-button" type="button" data-film="media/houbara-platform.mp4" data-title="Houbara Platform / Bench demonstration" aria-label="Enlarge Houbara platform video">↗</button></div><figcaption><span>Houbara Platform</span><span>WING-MOTION TEST</span></figcaption></figure>
+    <div class="platform-details"><p class="eyebrow">EXISTING PLATFORM</p><h3>Houbara</h3>
       <div class="platform-stats"><div><b>2</b><span>joints</span></div><div><b>2</b><span>DOF</span></div></div>
       <div class="design-challenge"><span class="mini-label">NEXT STEP</span><p>Simplified motion → Coordinated wing articulation</p></div>
     </div>
@@ -47,14 +43,19 @@
 
 <section class="section section-dark" id="progress" aria-labelledby="progress-title"><div class="wrap">
   <div class="section-heading research-heading"><div><p class="eyebrow">02 / RESEARCH IN MOTION</p><h2 id="progress-title">Observe. Engineer. Test.</h2></div><div class="target-stats"><p>Development target</p><div><b>3<small>joints</small></b><span>/</span><b>5<small>DOF</small></b></div></div></div>
-  <div class="research-flow" aria-label="Research workflow"><span><i>A</i> Motion capture</span><b>→</b><span><i>B</i> Mechanism design</span><b>→</b><span><i>C</i> Experimental exploration</span></div>
+  <div class="research-flow flow-cards four-step" aria-label="Research workflow: observe flight, extract motion, design mechanisms, develop experiments">
+    <div class="flow-step"><i class="flow-number">01</i><strong>Observe flight</strong><p>Side and rear views</p></div><span class="flow-arrow" aria-hidden="true">→</span>
+    <div class="flow-step"><i class="flow-number">02</i><strong>Extract motion</strong><p>Wrist and wingtip paths</p></div><span class="flow-arrow" aria-hidden="true">→</span>
+    <div class="flow-step"><i class="flow-number">03</i><strong>Design mechanisms</strong><p>3 joints · 5 DOF</p></div><span class="flow-arrow" aria-hidden="true">→</span>
+    <div class="flow-step"><i class="flow-number">04</i><strong>Develop experiments</strong><p>Camera setup · Trial design</p></div>
+  </div>
   <article class="research-block">
     <div class="work-heading"><div><span class="work-index">A</span><h3>From flight footage to motion targets.</h3></div></div>
     <div class="tracking-grid">
       <figure class="film-card tracking-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/dlc-side.jpg" src="media/dlc-side.mp4" aria-label="Side-view falcon keypoint tracking"></video><button class="play-button" type="button" data-film="media/dlc-side.mp4" data-title="Side view / Keypoint tracking" aria-label="Enlarge side-view tracking video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7z"/></svg></button></div><figcaption><span>Side view</span><span>TRACKED FLIGHT</span></figcaption></figure>
       <figure class="film-card tracking-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/dlc-rear.jpg" src="media/dlc-rear.mp4" aria-label="Rear-view falcon keypoint tracking"></video><button class="play-button" type="button" data-film="media/dlc-rear.mp4" data-title="Rear view / Keypoint tracking" aria-label="Enlarge rear-view tracking video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7z"/></svg></button></div><figcaption><span>Rear view</span><span>TRACKED FLIGHT</span></figcaption></figure>
     </div>
-    <div class="data-flow" aria-label="Motion reconstruction workflow"><span>Track keypoints</span><b aria-hidden="true">→</b><span>Reconstruct motion</span><b aria-hidden="true">→</b><span>Define targets</span></div>
+    <div class="data-flow flow-cards three-step" aria-label="Motion reconstruction workflow"><div class="flow-step"><i class="flow-number">01</i><strong>Track keypoints</strong><p>Wrist · Wingtip</p></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step"><i class="flow-number">02</i><strong>Reconstruct motion</strong><p>Paired spatial paths</p></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step"><i class="flow-number">03</i><strong>Define targets</strong><p>Length-normalized cycles</p></div></div>
     <div class="motion-heading"><h4>Spatial motion reference</h4><div class="motion-legend" aria-label="Trajectory legend"><span class="wrist-key">Wrist</span><span class="tip-key">Wingtip</span></div></div>
     <div class="trajectory-grid">
       <figure class="film-card trajectory-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/trajectory-front.jpg" src="media/trajectory-front.mp4" aria-label="Reconstructed wrist and wingtip trajectories in the X–Z plane"></video><button class="expand-button" type="button" data-film="media/trajectory-front.mp4" data-title="Motion reference / X–Z projection" aria-label="Enlarge X–Z trajectory video">↗</button></div><figcaption><span>X–Z</span><span>PROJECTION</span></figcaption></figure>
@@ -67,7 +68,7 @@
   <article class="research-block mechanism-block">
     <div class="work-heading"><div><span class="work-index">B</span><h3>From motion targets to mechanism design.</h3></div></div>
     <figure class="film-card mechanism-film"><div class="film-screen"><video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/mechanism.jpg" src="media/mechanism.mp4" aria-label="Mechanism simulation and reference-path comparison"></video><button class="expand-button" type="button" data-film="media/mechanism.mp4" data-title="Mechanism motion / Target and generated paths" aria-label="Enlarge mechanism simulation">↗</button></div><figcaption><span><i>03</i> Mechanism motion and path comparison</span><span class="simulation-label">SIMULATION / INTERIM RESULTS</span></figcaption></figure>
-    <div class="mechanism-summary"><p><span>EXTEND</span> 3 joints · 5 DOF</p><i>→</i><p><span>OPTIMIZE</span> Link lengths · Motion</p><i>→</i><p><span>COMPARE</span> Target · Generated path</p></div>
+    <div class="mechanism-summary flow-cards three-step" aria-label="Mechanism design sequence"><div class="flow-step"><i class="flow-number">01</i><strong>Extend the model</strong><p>3 joints · 5 DOF</p></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step"><i class="flow-number">02</i><strong>Optimize the design</strong><p>Link lengths · Cyclic motion</p></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step"><i class="flow-number">03</i><strong>Compare motion</strong><p>Target and generated paths</p></div></div>
   </article>
   <div class="research-output"><div class="output-title"><p class="eyebrow">RESEARCH OUTPUT</p><h3>Motion &amp; mechanisms</h3></div><div class="paper-count"><b>2</b><span>research papers</span></div><a class="secondary-link" href="https://yihaodong12.github.io/Falcon-Mechanism-Supplementary/" target="_blank" rel="noopener noreferrer">Research materials <span>↗</span></a></div>
 
@@ -91,11 +92,11 @@
   <div class="roadmap-tracks">
     <article class="roadmap-card visual-roadmap">
       <div class="roadmap-picture"><img src="media/engineering-concept.png" alt="Engineering concept of an articulated flapping-wing prototype and precision components" loading="lazy" width="1672" height="941"><span class="concept-badge">DESIGN CONCEPT</span></div>
-      <div class="roadmap-copy"><div class="roadmap-top"><span>01 / BUILD</span><span class="roadmap-arrow" aria-hidden="true">↗</span></div><h3>From model to prototype.</h3><div class="engineering-steps"><span><i>01</i>Engineer</span><b>→</b><span><i>02</i>Build</span><b>→</b><span><i>03</i>Validate</span></div><div class="deliverable"><span>DELIVERABLE</span><strong>3-joint, 5-DOF prototype</strong></div></div>
+      <div class="roadmap-copy"><div class="roadmap-top"><span>01 / BUILD</span><span class="roadmap-arrow" aria-hidden="true">↗</span></div><h3>From model to prototype.</h3><div class="engineering-steps mini-flow"><span class="flow-mini"><i>01</i><strong>Engineer</strong><small>Design for manufacture</small></span><b aria-hidden="true">→</b><span class="flow-mini"><i>02</i><strong>Build</strong><small>Fabricate &amp; assemble</small></span><b aria-hidden="true">→</b><span class="flow-mini"><i>03</i><strong>Validate</strong><small>Test wing motion</small></span></div><div class="deliverable"><span>DELIVERABLE</span><strong>3-joint, 5-DOF prototype</strong></div></div>
     </article>
     <article class="roadmap-card visual-roadmap">
       <div class="roadmap-picture"><img src="media/flight-phases-concept.png" alt="Illustrated falcon flight phases: take-off, level flight and landing" loading="lazy" width="1672" height="941"><span class="concept-badge">ILLUSTRATIVE FLIGHT PHASES</span></div>
-      <div class="roadmap-copy"><div class="roadmap-top"><span>02 / UNDERSTAND</span><span class="roadmap-arrow" aria-hidden="true">↗</span></div><h3>Capture the full flight cycle.</h3><div class="phase-labels"><span><i>↗</i>Take-off</span><span><i>→</i>Level flight</span><span><i>↘</i>Landing</span></div><div class="deliverable"><span>DELIVERABLE</span><strong>Multi-condition motion data</strong></div></div>
+      <div class="roadmap-copy"><div class="roadmap-top"><span>02 / UNDERSTAND</span><span class="roadmap-arrow" aria-hidden="true">↗</span></div><h3>Capture the full flight cycle.</h3><div class="phase-labels mini-flow"><span class="flow-mini"><i>01</i><strong>Take-off</strong><small>Launch motion</small></span><b aria-hidden="true">→</b><span class="flow-mini"><i>02</i><strong>Level flight</strong><small>Steady wingbeats</small></span><b aria-hidden="true">→</b><span class="flow-mini"><i>03</i><strong>Landing</strong><small>Approach &amp; settle</small></span></div><div class="deliverable"><span>DELIVERABLE</span><strong>Multi-condition motion data</strong></div></div>
     </article>
   </div>
   <div class="merge-connector" aria-hidden="true"><span></span><b>↓</b><span></span></div>
@@ -121,14 +122,14 @@
         <p class="loop-data-note">External research example—not project data.<br><a href="https://rs.figshare.com/articles/media/Supplementary_Movie_S2_from_Birds_both_avoid_and_control_collisions_by_harnessing_visually_guided_force_vectoring/19898226" target="_blank" rel="noopener noreferrer">Diana D. Chin &amp; David Lentink (2022), Movie S2</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · Excerpt; web-encoded.</p>
       </section>
     </div>
-    <div class="loop-transfer" aria-label="Planned feedback loop from biological analysis through design and testing"><span><b>Motion targets</b><small>From measured flight</small></span><i aria-hidden="true">→</i><span><b>Mechanism design</b><small>3 joints · 5 DOF</small></span><i aria-hidden="true">→</i><span><b>Prototype tests</b><small>Compare &amp; refine</small></span></div>
+    <div class="loop-transfer flow-cards three-step" aria-label="Planned feedback loop from biological analysis through design and testing"><div class="flow-step"><i class="flow-number">01</i><strong>Motion targets</strong><p>From measured flight</p></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step"><i class="flow-number">02</i><strong>Mechanism design</strong><p>3 joints · 5 DOF</p></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step"><i class="flow-number">03</i><strong>Prototype tests</strong><p>Compare &amp; refine</p></div></div>
     <div class="loop-feedback"><span aria-hidden="true">↶</span><p>Test results guide the next capture and design cycle.</p><span aria-hidden="true">↵</span></div>
   </article>
   <p class="visual-disclosure">Concept illustrations show planned directions, not completed hardware or experiments.</p>
 </div></section>
 </main>
-<footer class="site-footer wrap"><a class="footer-brand" href="#home">WING<span>BIO-INSPIRED FLIGHT</span></a><p>FLIGHT / MECHANISMS / EXPERIMENTS</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+<footer class="site-footer wrap"><a class="footer-brand" href="#home">RoboFalcon<span>BIO-INSPIRED FLIGHT</span></a><p>FLIGHT / MECHANISMS / EXPERIMENTS</p><a href="#home" class="back-top">Back to top ↑</a></footer>
 <dialog id="film-dialog" aria-labelledby="film-title"><div class="dialog-heading"><h2 id="film-title">Project film</h2><button id="close-film" type="button" aria-label="Close video">Close <span>×</span></button></div><video id="dialog-video" controls playsinline preload="metadata"></video><p class="dialog-hint">ESC to close · Use the player controls for fullscreen</p></dialog>
 <div id="notice" role="status" aria-live="polite" hidden></div><noscript><p class="noscript">Video enlargement requires JavaScript. All project content remains available to read.</p></noscript>
-<script src="app.js?v=20261001-capture"></script>
+<script src="app.js?v=20261001-robofalcon"></script>
 </body></html>
