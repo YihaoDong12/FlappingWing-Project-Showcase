@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c1a1e">
 <meta name="description" content="RoboFalcon: the Houbara flying platform, bio-inspired wing mechanisms, motion capture and experimental development.">
-<title>RoboFalcon</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-robofalcon">
+<title>RoboFalcon</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261001-plan">
 </head>
 <body>
 <a class="skip-link" href="#achieved">Skip to project achievements</a>
@@ -74,7 +74,19 @@
 
   <article class="research-block tunnel-block" aria-labelledby="tunnel-title">
     <div class="work-heading"><div><span class="work-index">C</span><h3 id="tunnel-title">Wind-tunnel measurement exploration.</h3></div><span class="exploration-tag">IN DEVELOPMENT</span></div>
-    <p class="experiment-intro">A robotic-bird surrogate helps develop camera settings, hardware selection and test procedures for future real-bird motion measurements.</p>
+    <div class="capture-rationale">
+      <p class="mini-label">WHY WIND-TUNNEL CAPTURE?</p>
+      <div class="rationale-flow flow-cards three-step" aria-label="Why expanding wing mobility requires real falcon motion measurements">
+        <div class="flow-step"><i class="flow-number">01</i><strong>Extend wing mobility</strong><p>From 2 to 5 DOF</p></div><span class="flow-arrow" aria-hidden="true">→</span>
+        <div class="flow-step"><i class="flow-number">02</i><strong>Learn real falcon motion</strong><p>Biological wing trajectories</p></div><span class="flow-arrow" aria-hidden="true">→</span>
+        <div class="flow-step"><i class="flow-number">03</i><strong>Measure in a wind tunnel</strong><p>Controlled, multi-view capture</p></div>
+      </div>
+      <div class="validation-sequence" aria-label="Validate the capture method on a robotic bird before planned real-falcon measurements">
+        <div class="validation-stage"><span class="mini-label">FIRST / METHOD VALIDATION</span><strong>Robotic-bird trials</strong><p>Check cameras, tracking and calibration.</p></div>
+        <span class="validation-arrow" aria-hidden="true">→</span>
+        <div class="validation-stage is-planned"><span class="mini-label">NEXT / PLANNED MEASUREMENTS</span><strong>Real falcon in the wind tunnel</strong><p>Extract motion once the method is validated.</p></div>
+      </div>
+    </div>
     <div class="tunnel-grid">
       <figure class="tunnel-visual"><div class="concept-screen"><img src="media/wind-tunnel-concept.png" alt="Concept illustration of a robotic bird in a wind-tunnel test section, viewed by two cameras" loading="lazy" width="1672" height="941"><span class="concept-badge">SETUP CONCEPT</span></div><figcaption>Multi-camera capture<span>Robotic-bird surrogate</span></figcaption></figure>
       <figure class="film-card robotbird-film" id="tunnel-panel"><div class="film-screen"><video id="tunnel-video" class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="media/robotbird-tracked.jpg" src="media/robotbird-tracked.mp4" aria-label="Robotic-bird flight trial with tracking markers"></video><button class="expand-button" type="button" data-film="media/robotbird-tracked.mp4" data-title="Robotic-bird flight trial / Marked motion capture" aria-label="Enlarge marked robotic-bird flight video">↗</button></div><figcaption><span>Robotic-bird flight trial</span><span>MARKER TRACKING</span></figcaption></figure>
@@ -88,7 +100,7 @@
 </div></section>
 
 <section class="section section-light roadmap" id="next" aria-labelledby="next-title"><div class="wrap">
-  <div class="section-heading"><div><p class="eyebrow">03 / THE NEXT CHAPTER</p><h2 id="next-title">Build. Understand. Integrate.</h2></div></div>
+  <div class="section-heading"><div><p class="eyebrow">03 / THE NEXT CHAPTER</p><h2 id="next-title">Build. Understand. Integrate.</h2></div><a class="plan-jump" href="#plan">24-month plan <span aria-hidden="true">↓</span></a></div>
   <div class="roadmap-tracks">
     <article class="roadmap-card visual-roadmap">
       <div class="roadmap-picture"><img src="media/engineering-concept.png" alt="Engineering concept of an articulated flapping-wing prototype and precision components" loading="lazy" width="1672" height="941"><span class="concept-badge">DESIGN CONCEPT</span></div>
@@ -126,10 +138,33 @@
     <div class="loop-feedback"><span aria-hidden="true">↶</span><p>Test results guide the next capture and design cycle.</p><span aria-hidden="true">↵</span></div>
   </article>
   <p class="visual-disclosure">Concept illustrations show planned directions, not completed hardware or experiments.</p>
+
+  <article class="delivery-plan" id="plan" aria-labelledby="plan-title">
+    <header class="plan-heading"><div><p class="eyebrow">DELIVERY PLAN / PROPOSED</p><h3 id="plan-title">Two years to an engineering prototype.</h3></div><div class="plan-target"><strong>24</strong><span>months<br>from kickoff</span></div></header>
+    <p class="plan-intro">Engineering development and biological motion research advance together.</p>
+    <ol class="project-timeline" aria-label="Proposed 24-month project timeline">
+      <li class="timeline-phase"><span class="phase-period">MONTHS 01–06</span><h4>Validate &amp; prepare</h4><p>Robotic-bird capture trials<br>Engineering requirements</p><div class="phase-output"><span>MILESTONE</span><strong>Capture method validated</strong></div></li>
+      <li class="timeline-phase"><span class="phase-period">MONTHS 07–12</span><h4>Capture &amp; design</h4><p>Planned falcon measurements<br>Design for manufacture</p><div class="phase-output"><span>MILESTONE</span><strong>Motion targets &amp; detailed design</strong></div></li>
+      <li class="timeline-phase"><span class="phase-period">MONTHS 13–18</span><h4>Build &amp; integrate</h4><p>Fabrication &amp; assembly<br>Wing-motion integration</p><div class="phase-output"><span>MILESTONE</span><strong>Assembled prototype</strong></div></li>
+      <li class="timeline-phase"><span class="phase-period">MONTHS 19–24</span><h4>Test &amp; refine</h4><p>Ground tests &amp; flight trials<br>Prototype refinement</p><div class="phase-output"><span>MILESTONE</span><strong>Engineering prototype delivery</strong></div></li>
+    </ol>
+    <div class="prototype-target"><svg viewBox="0 0 40 32" aria-hidden="true"><path d="M3 5 12 26 20 14 28 26 37 5M10 5l6 11m14-11-6 11M20 14v14"/></svg><div><span class="mini-label">24-MONTH TARGET</span><strong>A 3-joint, 5-DOF flapping-wing robotic bird engineering prototype</strong></div></div>
+    <section class="budget-panel" aria-labelledby="budget-title">
+      <div class="budget-summary"><p class="eyebrow">RESOURCE ENVELOPE</p><h4 id="budget-title">AED 2,000,000</h4><p>Estimated project budget</p></div>
+      <ul class="budget-categories" aria-label="Planned project expenditure categories">
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 12 7v13l-12 7L4 23V10zM4 10l12 7 12-7M16 17v13M10 6l12 7"/></svg><span><strong>Design &amp; manufacture</strong><small>Materials &amp; components</small></span></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="9" r="5"/><path d="M6 28v-4a10 10 0 0 1 20 0v4M7 8a4 4 0 0 0 0 8M25 8a4 4 0 0 1 0 8"/></svg><span><strong>Personnel</strong><small>Project team salaries</small></span></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 25V7m0 18h24M8 20l6-8 6 4 8-11M22 5h6v6"/></svg><span><strong>Experiments &amp; flight tests</strong><small>Test setup &amp; trial operations</small></span></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m4 18 10-4 5-11 3 1-2 11 9 5-1 3-10-3-4 8-3-1 1-9-8 3z"/></svg><span><strong>Travel</strong><small>Research &amp; test visits</small></span></li>
+      </ul>
+      <p class="budget-note">Indicative total; allocation across categories to be finalized.</p>
+    </section>
+    <p class="plan-note">Proposed schedule from project kickoff. Flight trials follow ground-test readiness; real-bird trials require suitable facilities and approvals.</p>
+  </article>
 </div></section>
 </main>
 <footer class="site-footer wrap"><a class="footer-brand" href="#home">RoboFalcon<span>BIO-INSPIRED FLIGHT</span></a><p>FLIGHT / MECHANISMS / EXPERIMENTS</p><a href="#home" class="back-top">Back to top ↑</a></footer>
 <dialog id="film-dialog" aria-labelledby="film-title"><div class="dialog-heading"><h2 id="film-title">Project film</h2><button id="close-film" type="button" aria-label="Close video">Close <span>×</span></button></div><video id="dialog-video" controls playsinline preload="metadata"></video><p class="dialog-hint">ESC to close · Use the player controls for fullscreen</p></dialog>
 <div id="notice" role="status" aria-live="polite" hidden></div><noscript><p class="noscript">Video enlargement requires JavaScript. All project content remains available to read.</p></noscript>
-<script src="app.js?v=20261001-robofalcon"></script>
+<script src="app.js?v=20261001-plan"></script>
 </body></html>
